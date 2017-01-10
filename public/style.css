@@ -1,0 +1,70 @@
+.background-image {
+  background: url(images/blue-room.jpg) no-repeat center center fixed;
+  /*background-color: pink;*/
+  background-size: cover;
+  height: 800px;
+  z-index: -1;
+  transition: all cubic-bezier(0.08, 0.94, 0.76, 0.75) 1s;
+}
+
+.blur {
+  -webkit-filter: blur(10px);
+}
+
+.petNameChoice {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.petChoice {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  /*left: 0;
+  right: 0;*/
+}
+
+.button {
+  display: block;
+  width: 50px;
+  height: 25px;
+  margin: 5px;
+  border: 3px solid yellow;
+  text-align: center;
+}
+
+.petOption {
+  z-index: 5;
+  float: left;
+  display: inline-block;
+  width: 200px;
+  height: 150px;
+  margin: 5px;
+  border: 5px solid yellow;
+  color: rgb(43, 10, 91);
+  text-align: center;
+  padding: 13px 16px;
+  text-decoration: none;
+}
+
+.petOption:hover {
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+  /*transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 2s;*/
+}
+
+.visible {
+  display: unset;
+  /*transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 2s;*/
+}
+
+.game {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+}

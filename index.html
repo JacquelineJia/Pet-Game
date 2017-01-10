@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+
+<link rel="stylesheet" type="text/css" href="public/style.css">
+
+  <title> Pet Game </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <div ng-class="backgroundState"></div>
+
+  <div ng-class="petNameChoiceState">
+    <h1 ng-class="question">I am going to name my new friend {{petName}}.</h1>
+    <input ng-model='petName'>
+    <div class="button" ng-click="checkPetName()">
+      done
+    </div>
+    <p>{{petNameMessage}}</p>
+
+  </div>
+
+  <div ng-class="petChoiceState">
+    <h1 ng-class="question">My new friend, {{petName}}, ...</h1>
+    <div>
+      <div class="petOption" ng-click="checkPetOption('petRound')">
+        is well rounded
+      </div>
+      <div class="petOption" ng-click="checkPetOption('petFlying')">
+        has high self-esteem
+      </div>
+      <div class="petOption" ng-click="checkPetOption('petHeart')">
+        follows their heart
+      </div>
+      <div class="petOption" ng-click="checkPetOption('petBlob')">
+        is flexible
+      </div>
+      <div class="petOption" ng-click="checkPetOption('petRock')">
+        is strong
+      </div>
+    </div>
+  </div>
+
+  <div ng-class="gameState">
+      <img ng-src="public/images/{{petType}}.png">
+
+
+      
+  </div>
+
+  <script src="public/myApp.js"></script>
+
+</body>
+</html>
