@@ -14,7 +14,7 @@
   <title> Pet Game </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
+<body ng-app="myApp" ng-controller="myCtrl" ng-mousemove="mouseMove($event)">
 
   <div ng-class="backgroundState"></div>
 
@@ -32,28 +32,36 @@
     <h1 ng-class="question">My new friend, {{petName}}, ...</h1>
     <div>
       <div class="petOption" ng-click="checkPetOption('petRound')">
-        is well rounded
+        is well rounded.
       </div>
       <div class="petOption" ng-click="checkPetOption('petFlying')">
-        has high self-esteem
+        has high self-esteem.
       </div>
       <div class="petOption" ng-click="checkPetOption('petHeart')">
-        follows their heart
+        follows their heart.
       </div>
       <div class="petOption" ng-click="checkPetOption('petBlob')">
-        is flexible
+        is flexible.
       </div>
       <div class="petOption" ng-click="checkPetOption('petRock')">
-        is strong
+        is strong.
       </div>
     </div>
   </div>
 
   <div ng-class="gameState">
-      <img ng-src="public/images/{{petType}}.png">
+    <h1 class="petNameHeader">{{petName}}</h1>
+    <!-- <div ng-class="petState"> -->
+      <img ng-class="petPos" ng-src="{{petImg}}">
+      <img ng-class="petBox" ng-src="{{petImg}}" ng-mouseover="petMouseOver()" ng-mouseleave="petNormal()" ng-click="petClick()">
+    <!-- </div> -->
 
+    <div>
+      <img class="holding" ng-src="{{foodImg}}" ng-style="showFood && {'top':y, 'left':x}">
+      <img class="actionOption" src="public/images/apple.png" ng-click="pickFood('apple')">
+      <img class="actionOption" src="public/images/water.png" ng-click="pickFood('water')">
+    </div>
 
-      
   </div>
 
   <script src="public/myApp.js"></script>
