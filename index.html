@@ -25,15 +25,11 @@
       done
     </div>
     <p>{{petNameMessage}}</p>
-
   </div>
 
   <div ng-class="petChoiceState">
     <h1 ng-class="question">My new friend, {{petName}}, ...</h1>
     <div>
-      <div class="petOption" ng-click="checkPetOption('petRound')">
-        is well rounded.
-      </div>
       <div class="petOption" ng-click="checkPetOption('petFlying')">
         has high self-esteem.
       </div>
@@ -53,13 +49,19 @@
     <h1 class="petNameHeader">{{petName}}</h1>
     <!-- <div ng-class="petState"> -->
       <img ng-class="petPos" ng-src="{{petImg}}">
-      <img ng-class="petBox" ng-src="{{petImg}}" ng-mouseover="petMouseOver()" ng-mouseleave="petNormal()" ng-click="petClick()">
+      <img ng-class="petBox" ng-src="public/images/{{petType}}.png" ng-mouseover="petMouseOver()" ng-mouseleave="petNormal()" ng-click="petClick()">
     <!-- </div> -->
 
-    <div>
-      <img class="holding" ng-src="{{foodImg}}" ng-style="showFood && {'top':y, 'left':x}">
-      <img class="actionOption" src="public/images/apple.png" ng-click="pickFood('apple')">
-      <img class="actionOption" src="public/images/water.png" ng-click="pickFood('water')">
+
+    <img class="holding" ng-src="{{foodImg}}" ng-style="showFood && {'top':y, 'left':x}">
+    <div class="actionChoice">
+      <!-- <div class="actionOption"> -->
+        <img class="actionOption" src="public/images/apple.png" ng-click="pickFood('apple')">
+      <!-- </div> -->
+      <!-- <div class="actionOption"> -->
+        <img class="actionOption" src="public/images/water.png" ng-click="pickFood('water')">
+      <!-- </div> -->
+        <img class="actionOption" src="public/images/icecream.png" ng-click="pickFood('icecream')">
     </div>
 
   </div>

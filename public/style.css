@@ -17,14 +17,6 @@
   left: 20px;
 }
 
-.petChoice {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  /*left: 0;
-  right: 0;*/
-}
-
 .button {
   display: block;
   width: 50px;
@@ -38,6 +30,12 @@
 
 .button:hover {
   opacity: 0.8;
+}
+
+.petChoice {
+  position: fixed;
+  top: 20px;
+  left: 20px;
 }
 
 .petOption {
@@ -54,7 +52,6 @@
   color: rgb(43, 10, 91);
   text-align: center;
   text-decoration: none;
-  /*object-position: center;*/
 }
 
 .petOption:hover {
@@ -63,20 +60,14 @@
 
 .hidden {
   display: none;
-  /*transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 2s;*/
 }
 
 .visible {
   display: unset;
-  /*transition: all cubic-bezier(0.55, 0.76, 0.75, 0.94) 2s;*/
 }
 
 .game {
   /*position: fixed;*/
-  /*top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;*/
 }
 
 .petNameHeader {
@@ -102,7 +93,7 @@
   height: auto;
 }
 
-.petRock {
+.pet {
   -webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
@@ -116,34 +107,47 @@
   -ms-transform: scale(0.86, 0.92) translate(-60%, -50%);
   -o-transform: scale(0.86, 0.92) translate(-60%, -50%);
   transform: scale(0.86, 0.92) translate(-60%, -50%);
+  z-index: 3;
+  border-radius: 500px;
+  opacity: 0;
+}
 
+.petBlobBox {
+  -webkit-transform: scale(0.86, 0.92) translate(-60%, -50%);
+  -moz-transform: scale(0.86, 0.92) translate(-60%, -50%);
+  -ms-transform: scale(0.86, 0.92) translate(-60%, -50%);
+  -o-transform: scale(0.86, 0.92) translate(-60%, -50%);
+  transform: scale(0.58, 0.95) translate(-65%, -53%);
   z-index: 5;
   border-radius: 500px;
   opacity: 0;
 }
 
-.actionOption {
+.actionChoice {
   position: fixed;
+  left: 20px;
+  bottom: 15px;
+}
+
+.actionOption {
   /*top: 50%;
   left: 50%;*/
-  max-width: 25%;
-  max-height: 20%;
+
+  max-width: 100px;
+  max-height: 100px;
   min-width: 10px;
   min-height: 10px;
   width: auto;
   height: auto;
 
-
-  left: 20px;
-  bottom: 15px;
-  z-index: 5;
+  z-index: 6;
   float: left;
   display: inline-block;
-  margin: 0px;
+  margin: 2px;
   border-radius: 25px;
+  padding: 15px 18px;
   border: 5px solid rgb(91, 60, 19);
   background-color: rgba(140, 113, 73, 0.8);
-  padding: 15px 18px;
 }
 
 .actionOption:hover {
@@ -152,7 +156,7 @@
 }
 
 .holding {
-  position: absolute;;
+  position: fixed;
   max-width: 18%;
   max-height: 15%;
   min-width: 10px;

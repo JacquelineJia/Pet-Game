@@ -31,7 +31,7 @@ app.controller('myCtrl', function ($scope) {
     $scope.petType = petType;
     petImg = "public/images/" + petType + ".png";
     $scope.petImg = petImg;
-    $scope.petPos = petType + " petPos";
+    $scope.petPos = "pet petPos";
     $scope.petBox = petType + "Box" + " petPos";
   };
 
