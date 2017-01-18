@@ -30,6 +30,7 @@
 
 .button:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .petChoice {
@@ -56,6 +57,7 @@
 
 .petOption:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .hidden {
@@ -153,6 +155,7 @@
 .actionOption:hover {
   border: 5px solid rgb(51, 34, 11);
   background-color: rgba(93, 76, 51, 0.8);
+  cursor: pointer;
 }
 
 .holding {
