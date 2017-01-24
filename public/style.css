@@ -2,7 +2,7 @@
   background: url(images/blue-room.jpg) no-repeat center center fixed;
   /*background-color: pink;*/
   background-size: cover;
-  height: 800px;
+  height: 100%;
   z-index: -1;
   transition: all cubic-bezier(0.08, 0.94, 0.76, 0.75) 1s;
 }
